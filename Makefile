@@ -25,8 +25,8 @@ clean:
 	@find . -type d -name "__pycache__" -exec rm -rf {} +
 
 lint:
-	$(FLAKE) --exclude=.venv, data,.git,__pycache__ .
-	$(MYPY) --strict--exclude "(.venv|data|\.git|__pycache__)" .
+	$(FLAKE) --exclude=.venv,data,.git,__pycache__ .
+	$(MYPY) --strict --exclude "(.venv|data|\.git|__pycache__)" .
 
 help:
 	@echo "Commandes disponibles pour fasta-clean"
