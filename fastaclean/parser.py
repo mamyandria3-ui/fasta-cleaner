@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 
 def parse_fasta(file_path: str) -> dict[str, str]:
     result: dict[str, str] = {}
