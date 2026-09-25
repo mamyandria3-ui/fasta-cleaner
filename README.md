@@ -36,20 +36,22 @@ This project intentionally does not rely on [Biopython](https://biopython.org/).
 fasta-clean/
 ├── data/
 │   ├── raw/                 # Raw FASTA files
-│   ├── cleaned/              # Filtered FASTA files
-│   └── report/                # JSON report
+│   ├── cleaned/             # Filtered FASTA files
+│   └── report/              # JSON report
 ├── scripts/
 │   └── fetch_sample.sh      # Shell script to download a sample dataset
 ├── fastaclean/
 │   ├── __init__.py
-│   ├── parser.py             # FASTA file reading and validation
-│   ├── metrics.py            # Statistical calculations (GC content, length)
-│   └── filter.py             # Sequence filtering logic
-├── main.py                   # CLI entry point (argparse)
+│   ├── parser.py            # FASTA file reading and validation
+│   ├── metrics.py           # Statistical calculations (GC content, length)
+│   └── filter.py            # Sequence filtering logic
+├── main.py                  # CLI entry point (argparse)
 ├── tests/
-│   └── test_parser.py        # Basic unit tests
-├── Makefile                  # Automation (setup, run, test, clean, lint)
-└── README.md                 # Full documentation
+│   ├── test_parser.py       # Unit tests for FASTA parser
+│   ├── test_metrics.py      # Unit tests for metrics and statistics
+│   └── test_filter.py       # Unit tests for filtering rules
+├── Makefile                 # Automation (setup, run, test, clean, lint)
+└── README.md                # Full documentation
 ```
 
 ---
@@ -109,12 +111,12 @@ python3 main.py --input data/raw/sample.fasta \
                  --max-n-percent 5.0
 ```
 
-Before running the script directly wit './main/py', you must first download the required test dataset by executing the dedicated Shell script:
+Before running the script directly wit `./main/py`, you must first download the required test dataset by executing the dedicated Shell script:
 
 
 ```bash
-chmod +x fetch_data.sh
-./fetch_data.sh
+chmod +x fetch_sample.sh
+./fetch_sample.sh
 ```
 
 #### CLI options
