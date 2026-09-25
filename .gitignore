@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+#Fastaclean specific outputs
+sample.fasta
+clean.fasta
+report.json
+data/
+*.log
