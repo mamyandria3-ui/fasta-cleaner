@@ -111,7 +111,7 @@ python3 main.py --input data/raw/sample.fasta \
                  --max-n-percent 5.0
 ```
 
-Before running the script directly wit `./main/py`, you must first download the required test dataset by executing the dedicated Shell script:
+Before running the script directly wit `./main.py`, you must first download the required test dataset by executing the dedicated Shell script:
 
 
 ```bash
