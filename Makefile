@@ -26,7 +26,7 @@ fetch:
 	@chmod +x $(SCRIPT)
 	@bash $(SCRIPT)
 
-run: fetch
+run:
 	@mkdir -p data/cleaned/
 	@mkdir -p data/report/
 	@$(PYTHON) main.py --input $(RAW_DIR)/sample.fasta --output $(CLEAN_DIR)/clean.fasta --report $(REPORT_DIR)/report.json

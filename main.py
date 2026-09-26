@@ -140,9 +140,3 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"An unexpected error occurred: {e}", file=sys.stderr)
         sys.exit(1)
-    else:
-        print()
-        print(f"{GREEN} Cleaning completed successfully !{RESET}")
-        print(f"{CYAN} Cleaned FASTA file: {RESET} data/cleaned/clean.fasta")
-        print(f"{CYAN} Execution report: {RESET} data/report/report.json")
-        print()
